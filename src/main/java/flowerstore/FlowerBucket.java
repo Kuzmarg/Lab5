@@ -17,4 +17,7 @@ public class FlowerBucket {
         }
         return price;
     }
+    public FlowerSpec getSpec() {
+        return new FlowerSpec(this.flowerPacks, getPrice());
+    }
 }
