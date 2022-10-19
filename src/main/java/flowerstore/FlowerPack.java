@@ -4,6 +4,8 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.Objects;
+
 @AllArgsConstructor @Getter @Setter
 public class FlowerPack {
     private Flower flower;
@@ -12,12 +14,16 @@ public class FlowerPack {
     public int getPrice() {
         return amount*flower.getPrice();
     }
-    public boolean equals(FlowerPack flowerPack) {
-        Flower firstFlower = this.getFlower();
-        Flower secondFlower = flowerPack.getFlower();
-        return (firstFlower.getSepalLength() == secondFlower.getSepalLength() &&
-                firstFlower.getColor().equals(secondFlower.getColor()) &&
-                firstFlower.getPrice() == secondFlower.getPrice());
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        FlowerPack that = (FlowerPack) o;
+        Flower firstFlower = getFlower();
+        Flower secondFlower = that.getFlower();
+        return (firstFlower.getSepalLength() == secondFlower.getSepalLength()
+                && firstFlower.getColor().equals(secondFlower.getColor())
+                && firstFlower.getPrice() == secondFlower.getPrice());
     }
 }
