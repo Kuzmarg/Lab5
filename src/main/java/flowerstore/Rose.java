@@ -1,11 +1,11 @@
 package flowerstore;
 
 public class Rose extends Flower {
-    public static final int rosePrice = 25;
-    public static final int roseSepalLength = 1;
+    public static final int ROSEPRICE = 25;
+    public static final int ROSESEPALLENGTH = 1;
     public Rose() {
         setColor(FlowerColor.RED);
-        setPrice(rosePrice);
-        setSepalLength(roseSepalLength);
+        setPrice(ROSEPRICE);
+        setSepalLength(ROSESEPALLENGTH);
     }
 }

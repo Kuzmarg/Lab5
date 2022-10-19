@@ -5,21 +5,21 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Assertions;
 
 public class FlowerBucketTest {
+    private static final int CHECKPRICE = 10;
+    private static final int CHECKTOTALPRICE = 100;
     private FlowerBucket flowerBucket;
-    private static final int checkPrice = 10;
-    private static final int checkTotalPrice = 100;
     @BeforeEach
     public void init() {
         Flower flower = new Rose();
-        flower.setPrice(checkPrice);
-        FlowerPack flowerPack = new FlowerPack(flower, checkPrice);
+        flower.setPrice(CHECKPRICE);
+        FlowerPack flowerPack = new FlowerPack(flower, CHECKPRICE);
         flowerBucket = new FlowerBucket();
         flowerBucket.add(flowerPack);
     }
 
     @Test
     public void testPrice() {
-        Assertions.assertEquals(checkTotalPrice, flowerBucket.getPrice());
+        Assertions.assertEquals(CHECKTOTALPRICE, flowerBucket.getPrice());
     }
 
 }
