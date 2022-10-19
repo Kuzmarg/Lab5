@@ -12,4 +12,12 @@ public class FlowerPack {
     public int getPrice() {
         return amount*flower.getPrice();
     }
+    public boolean equals(FlowerPack flowerPack) {
+        Flower firstFlower = this.getFlower();
+        Flower secondFlower = flowerPack.getFlower();
+        return (firstFlower.getSepalLength() == secondFlower.getSepalLength() &&
+                firstFlower.getColor().equals(secondFlower.getColor()) &&
+                firstFlower.getPrice() == secondFlower.getPrice());
+
+    }
 }

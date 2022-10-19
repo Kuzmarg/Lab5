@@ -6,7 +6,7 @@ public enum FlowerColor {
     @Override
     public String toString() {
         if (this.equals(FlowerColor.WHITE)) {
-            return "FFFFFF";
+            return "#FFFFFF";
         }
 
         if (this.equals(FlowerColor.RED)) {
