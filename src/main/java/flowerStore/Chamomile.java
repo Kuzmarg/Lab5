@@ -1,6 +1,6 @@
-package flower_store;
+package flowerStore;
 
-public class Chamomile extends Flower{
+public class Chamomile extends Flower {
 
     public Chamomile() {
         setColor(FlowerColor.WHITE);

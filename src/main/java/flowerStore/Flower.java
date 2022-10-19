@@ -1,4 +1,4 @@
-package flower_store;
+package flowerStore;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -9,7 +9,7 @@ public class Flower {
     private int price;
     private FlowerColor color;
 
-    public String getColor(){
+    public String getColor() {
         return color.toString();
     }
 }
