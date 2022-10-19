@@ -18,8 +18,8 @@ public class Store {
             }
             boolean areMatching = false;
             for (FlowerPack flowerPack : checkedSpec.getFlowerPackList()) {
-                for (FlowerPack searchedPack :
-                        searchRequest.getFlowerPackList()) {
+                for (FlowerPack searchedPack
+                        : searchRequest.getFlowerPackList()) {
                     if (flowerPack.equals(searchedPack)) {
                         areMatching = true;
                     }
