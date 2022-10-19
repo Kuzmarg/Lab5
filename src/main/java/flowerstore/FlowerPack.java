@@ -1,4 +1,4 @@
-package flowerStore;
+package flowerstore;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -9,7 +9,7 @@ public class FlowerPack {
     private Flower flower;
     private int amount;
 
-    public int getPrice(){
+    public int getPrice() {
         return amount*flower.getPrice();
     }
 }

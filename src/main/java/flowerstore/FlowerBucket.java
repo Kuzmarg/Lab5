@@ -1,4 +1,4 @@
-package flowerStore;
+package flowerstore;
 
 import java.util.ArrayList;
 import java.util.List;
